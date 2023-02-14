@@ -2,6 +2,8 @@ require 'pry'
 
 class Album
 
+    @@album_count = 0
+
     # Setter method
     def release_date=(date)
         @release_date = date
