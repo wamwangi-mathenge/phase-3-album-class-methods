@@ -2,10 +2,15 @@ require 'pry'
 
 class Album
 
+    GENRES = ["Hip-Hop", "Pop", "Jazz"]
+
     @@album_count = 0
 
-    def initialize
-        @@album_count += 1
+    def initialize(genre)
+        if GENRES.include?(genre)
+            @@album_count += 1
+        end
+        
     end
 
     def self.count
@@ -29,8 +34,10 @@ end
 
 # puts Album.count
 
-Album.new
-Album.new
-Album.new
+# Album.new
+# Album.new
+# Album.new
 
-puts Album.count
+# puts Album.count
+
+puts Album::GENRES
